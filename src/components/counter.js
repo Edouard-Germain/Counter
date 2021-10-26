@@ -1,14 +1,14 @@
 import React from "react";
-import App from "./App";
 
 class Counter extends React.Component{
     render(){
+        console.log("Counter : ", this)
         return(
             <div>
             <h1>Counter</h1>
-            <h2>{this.state.count}</h2>
-            <button onClick = {this.handlePlusClick}>+</button>
-            <button onClick={this.handleMinusClick}>-</button>
+            <h2>{this.props.count}</h2>
+            <button onClick = {this.props.increment}>+</button>
+            <button onClick={this.props.substract}>-</button>
           </div>
         )
     }
